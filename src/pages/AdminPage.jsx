@@ -39,13 +39,13 @@ export default function AdminPage() {
     try {
       const data = await login(email, password)
       const token = data.token || data.accessToken || data.access_token
-      if (token) {
+      // if (token) {
         localStorage.setItem('admin_token', token)
         setIsLoggedIn(true)
         fetchContent()
-      } else {
+      // } else {
         setLoginError('Sunucudan token alınamadı')
-      }
+      // }
     } catch (err) {
       setLoginError(err.message || 'Giriş başarısız')
     } finally {

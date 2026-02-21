@@ -47,7 +47,7 @@ export async function putContent(key, value) {
  * @returns {Promise<{ token: string }>}
  */
 export async function login(email, password) {
-  const res = await fetch(`${API_BASE}/api/auth/login`, {
+  const res = await fetch(`${API_BASE}/api/admin/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password }),
