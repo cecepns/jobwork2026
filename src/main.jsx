@@ -10,16 +10,15 @@ function AppWrapper() {
   useEffect(() => {
     AOS.init({ duration: 600, once: true })
   }, [])
-
-  return null;
-  // return (
-  //   <BrowserRouter>
-  //     <Routes>
-  //       <Route path="/" element={<App />} />
-  //       <Route path="/admin" element={<AdminPage />} />
-  //     </Routes>
-  //   </BrowserRouter>
-  // )
+  
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/admin" element={<AdminPage />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 createRoot(document.getElementById('root')).render(
