@@ -92,7 +92,7 @@ function App() {
       </nav>
 
       {/* Hero */}
-      <section id="anasayfa" className="relative pt-44 min-h-screen pb-20 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800">
+      <section id="anasayfa" className="relative pt-24 md:pt-44 min-h-screen pb-20 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-72 h-72 bg-white/30 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl" />
