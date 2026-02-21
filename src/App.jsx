@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Clock, Wallet, TrendingUp, ClipboardList, FileText, CheckCircle, Banknote, Plus, Minus } from 'lucide-react'
+import { getContent, CONTENT_KEYS } from './utils/api'
 
 const navLinks = [
   { href: '#anasayfa', label: 'Anasayfa' },
@@ -65,6 +66,16 @@ function App() {
   const [days, setDays] = useState(30)
   const [result, setResult] = useState(1500)
   const [openFaq, setOpenFaq] = useState(null)
+  const [waLink, setWaLink] = useState('https://wa.me/12032433763')
+
+  useEffect(() => {
+    getContent(CONTENT_KEYS.WA_LINK)
+      .then((val) => {
+        const url = typeof val === 'string' ? val : val?.url
+        if (url) setWaLink(url)
+      })
+      .catch(() => {})
+  }, [])
 
   const calculate = () => {
     setResult(minPay * (hours / 8) * days)
@@ -402,7 +413,7 @@ function App() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/12032433763"
+        href={waLink}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition"
