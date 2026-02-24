@@ -180,7 +180,7 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">
               <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
-                Gagnez de l’argent en ligne en France — Horaires flexibles et paiements quotidiens
+                Gagnez de l’argent en ligne en Belgique🇧🇪 — Horaires flexibles et paiements quotidiens
               </h1>
               <ul className="space-y-2 text-white/90 mb-8">
                 <li className="flex items-center gap-2">• Vous n’êtes pas lié(e) aux horaires de bureau</li>
